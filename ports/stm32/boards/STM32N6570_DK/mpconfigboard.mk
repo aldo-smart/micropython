@@ -1,5 +1,5 @@
 # STM32N6570-DK board configuration
-USE_MBOOT ?= 1
+USE_MBOOT ?= 0
 
 MCU_SERIES = n6
 CMSIS_MCU = STM32N657xx
@@ -9,7 +9,7 @@ SYSTEM_FILE = $(STM32LIB_CMSIS_BASE)/Source/Templates/system_stm32$(MCU_SERIES)x
 else
 SYSTEM_FILE = $(STM32LIB_CMSIS_BASE)/Source/Templates/system_stm32$(MCU_SERIES)xx_s.o
 endif
-STM32_N6_HEADER_VERSION = 2.1
+# STM32_N6_HEADER_VERSION = 2.1
 DKEL = $(STM32_CUBE_PROGRAMMER)/bin/ExternalLoader/MX25UM51245G_STM32N6570-NUCLEO.stldr
 
 ifeq ($(USE_MBOOT),1)
