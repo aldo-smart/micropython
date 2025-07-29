@@ -12,7 +12,7 @@
 #define MICROPY_HW_ENABLE_RTC                   (1)
 #define MICROPY_HW_ENABLE_DAC                   (0)
 #define MICROPY_HW_ENABLE_USB                   (1)
-#define MICROPY_HW_ENABLE_SDCARD                (1)
+#define MICROPY_HW_ENABLE_SDCARD                (0)
 #define MICROPY_PY_PYB_LEGACY                   (0)
 
 #define MICROPY_BOARD_EARLY_INIT                board_early_init
@@ -70,9 +70,9 @@
 #define MICROPY_HW_LED_ON(pin)                  (mp_hal_pin_low(pin))
 #define MICROPY_HW_LED_OFF(pin)                 (mp_hal_pin_high(pin))
 
-// SD Card SDMMC - Assuming similar configuration to other N6 boards
-#define MICROPY_HW_SDCARD_SDMMC                 (1)
-#define MICROPY_HW_SDCARD_MOUNT_AT_BOOT         (0)
+// SD Card SDMMC - Disabled for now due to pin conflicts
+// #define MICROPY_HW_SDCARD_SDMMC                 (1)
+// #define MICROPY_HW_SDCARD_MOUNT_AT_BOOT         (0)
 
 // USB config
 #define MICROPY_HW_USB_HS                       (1)
